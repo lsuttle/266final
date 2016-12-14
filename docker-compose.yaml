@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  tensorflow:
+    build:
+      context: .
+      dockerfile: anaconda.Dockerfile
+    volumes:
+      - ".:/host"
+    ports:
+      - "9000:9000"
+      - "6006:6006"
+
